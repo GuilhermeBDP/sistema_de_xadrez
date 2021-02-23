@@ -22,28 +22,31 @@ public class ChessMatch {
 		}
 		return mat;
 	}
-	
+
 	private void placeNewPiece(char column, int row, ChessPiece piece) {
 		board.placePiece(piece, new ChessPosition(column, row).toPosition());
 	}
-	
+
 	private void initialSetup() {
-		placeNewPiece('b', 6, new Rook(board, Color.WHITE));
-		placeNewPiece('e', 8, new King(board, Color.BLACK));
-		placeNewPiece('e', 1, new King(board, Color.WHITE));
+		placeNewPiece('c', 1, new Rook(board, Color.WHITE));
+		placeNewPiece('c', 2, new Rook(board, Color.WHITE));
+		placeNewPiece('d', 2, new Rook(board, Color.WHITE));
+		placeNewPiece('e', 2, new Rook(board, Color.WHITE));
+		placeNewPiece('e', 1, new Rook(board, Color.WHITE));
+		placeNewPiece('d', 1, new King(board, Color.WHITE));
+
+		placeNewPiece('c', 7, new Rook(board, Color.BLACK));
+		placeNewPiece('c', 8, new Rook(board, Color.BLACK));
+		placeNewPiece('d', 7, new Rook(board, Color.BLACK));
+		placeNewPiece('e', 7, new Rook(board, Color.BLACK));
+		placeNewPiece('e', 8, new Rook(board, Color.BLACK));
+		placeNewPiece('d', 8, new King(board, Color.BLACK));
 	}
 }
 
 /*
-
-0 8 - - - - - - - - 
-1 7 - - - - - - - - 
-2 6 - - - - - - - - 
-3 5 - - - - - - - - 
-4 4 - - - - - - - - 
-5 3 - - - - - - - - 
-6 2 - - - - - - - - 
-7 1 - - - - - - - - 
-    a b c d e f g h
-    0 1 2 3 4 5 6 7
-*/
+ * 
+ * 0 8 - - - - - - - - 1 7 - - - - - - - - 2 6 - - - - - - - - 3 5 - - - - - - -
+ * - 4 4 - - - - - - - - 5 3 - - - - - - - - 6 2 - - - - - - - - 7 1 - - - - - -
+ * - - a b c d e f g h 0 1 2 3 4 5 6 7
+ */
