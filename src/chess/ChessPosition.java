@@ -33,7 +33,7 @@ public class ChessPosition {
 
 	@Override
 	public String toString() {
-		return "" + column + row; // o "" é para o compilador entender que é uma concatenação de strings
+		return "" + column + row;
 	}
 	
 }
